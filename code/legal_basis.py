@@ -14,7 +14,7 @@ BASES = {
 }
 
 # these two can't be used for sensitive data
-NOT_FOR_SENSITIVE = {"legitimate_interest", "credit_protection", "contract"}
+NOT_FOR_SENSITIVE = {"legitimate_interest", "credit_protection"}
 
 
 def check_activity(purpose, basis, sensitive=False):

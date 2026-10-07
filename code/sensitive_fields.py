@@ -3,7 +3,7 @@
 
 SENSITIVE_KEYWORDS = [
     "race", "ethnicity", "religion", "political", "union",
-    "health", "disease", "sexual", "genetic", "biometric", "fingerprint",
+    "health", "disease", "sexual", "genetic", "biometric", "fingerprint", "blood",
 ]
 
 PERSONAL_KEYWORDS = [

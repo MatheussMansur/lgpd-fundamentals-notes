@@ -1,5 +1,18 @@
 # Module 2 - Data processing
 
+## 2.1 Processing operations
+"Tratamento" is any operation with personal data. The course lists 20:
+access, storage, archiving (keeping a record even after it expired), evaluation, classification,
+collection (for a specific purpose), sharing, communication, control, diffusion, distribution,
+deletion, extraction, modification, processing, production (creating products/services from data),
+reception, reproduction, transfer (to another storage or to a third party), transmission, use.
+
+Sharing also covers international transfer and databases shared between public bodies, between
+public and private (with specific authorization) or between private companies.
+
+Principles (art. 6): purpose, adequacy, necessity, free access, data quality, transparency,
+security, prevention, non-discrimination, accountability.
+
 ## Legal bases (art. 7) - you need at least one to process personal data
 1. consent
 2. legal or regulatory obligation

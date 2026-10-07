@@ -3,6 +3,8 @@ import unittest
 from legal_basis import check_activity
 from pseudonymize import anonymize_age, mask_cpf, pseudonymize_cpf
 from sensitive_fields import classify_field
+from subject_requests import SubjectRequest
+from datetime import date
 
 
 class TestSensitiveFields(unittest.TestCase):
@@ -37,6 +39,20 @@ class TestPseudonymize(unittest.TestCase):
 
     def test_age_range(self):
         self.assertEqual(anonymize_age(1998), "20-29")
+
+
+class TestSubjectRequests(unittest.TestCase):
+    def test_deadline_is_15_days(self):
+        r = SubjectRequest("Ana", "access", date(2026, 10, 1))
+        self.assertEqual(r.deadline(), date(2026, 10, 16))
+
+    def test_late(self):
+        r = SubjectRequest("Ana", "access", date(2026, 9, 1))
+        self.assertTrue(r.is_late(date(2026, 10, 7)))
+
+    def test_unknown_type(self):
+        with self.assertRaises(ValueError):
+            SubjectRequest("Ana", "free_pizza", date(2026, 10, 1))
 
 
 if __name__ == "__main__":
